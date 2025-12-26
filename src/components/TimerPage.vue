@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 // ✨✨ เช็คชื่อไฟล์รูปของคุณให้ชัวร์นะครับ (jpg/png) ✨✨
-import coupleImg from '../assets/img_timer.jpg' 
+import coupleImg from '../assets/couple.jpg'
 
 const emit = defineEmits(['back'])
 const START_DATE = new Date('2022-10-14T00:00:00') 
