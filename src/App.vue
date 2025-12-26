@@ -6,7 +6,8 @@ import SunflowerPage from './components/SunflowerPage.vue'
 import MainMenu from './components/MainMenu.vue'
 import TimerPage from './components/TimerPage.vue'
 import LetterPage from './components/LetterPage.vue'
-import QuizPage from './components/QuizPage.vue' // 👈 1. เพิ่มการนำเข้า QuizPage
+import QuizPage from './components/QuizPage.vue'
+import GalleryPage from './components/GalleryPage.vue'
 
 const currentPage = ref('gift-box')
 const selectedMenu = ref(null)
@@ -42,14 +43,12 @@ const handleMenuSelect = (menuId) => {
         @back="toMainMenu" 
       />
 
-      <div v-else class="flex flex-col items-center justify-center min-h-screen p-4 text-center">
-        <h1 class="text-3xl text-pink-600 font-bold mb-4">กำลังทำหน้านี้อยู่จ้า... 🔨</h1>
-        <p class="text-gray-500 mb-8">เมนูที่เลือก: {{ selectedMenu }}</p>
-        <button @click="toMainMenu" class="bg-gray-300 px-6 py-2 rounded-full hover:bg-gray-400 shadow-md">
-          กลับไปเมนูหลัก
-        </button>
-      </div>
-    </transition>
+      <GalleryPage 
+        v-else-if="currentPage === 'feature-gallery'" 
+        @back="toMainMenu" 
+      />
+
+      </transition>
 
   </div>
 </template>
