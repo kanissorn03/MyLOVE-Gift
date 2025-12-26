@@ -24,6 +24,7 @@ const checkPassword = () => {
   }
 }
 
+// เช็กอัตโนมัติเมื่อครบ 6 หลัก
 watch(password, (newVal) => {
   if (newVal.length === 6) {
     checkPassword()
@@ -53,7 +54,7 @@ watch(password, (newVal) => {
         </p>
       </div>
 
-      <div class="relative h-16 md:h-20 mb-8">
+      <div class="relative h-16 md:h-20 mb-6">
         <input 
           type="tel"
           :value="password"
@@ -82,18 +83,11 @@ watch(password, (newVal) => {
         </div>
       </div>
 
-      <div class="h-6 mb-4">
+      <div class="h-6">
         <p v-if="isError" class="text-white text-sm font-bold bg-red-400/80 px-3 py-1 rounded-full inline-block animate-bounce shadow-sm">
           ❌ รหัสผิดนะจ๊ะคนดี
         </p>
       </div>
-
-      <button 
-        @click="checkPassword"
-        class="bg-white text-[#ff6b8b] text-lg font-bold py-3 px-10 rounded-full shadow-lg hover:bg-pink-50 hover:scale-105 hover:shadow-xl transition-all duration-300 active:scale-95 w-full md:w-auto"
-      >
-        ยืนยันรหัส ❤️
-      </button>
 
     </div>
   </div>
