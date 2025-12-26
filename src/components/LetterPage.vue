@@ -70,7 +70,7 @@ const toggleLetter = () => {
                 @click="toggleLetter"
                 class="text-sm text-pink-400 underline hover:text-pink-600 transition-colors flex items-center justify-center gap-1 mx-auto"
               >
-                <span>📥</span> เก็บจดหมายลงซอง
+                <span>💕</span> เก็บจดหมายลงซอง
               </button>
             </div>
           </div>

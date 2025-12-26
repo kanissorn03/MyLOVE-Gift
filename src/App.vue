@@ -5,7 +5,8 @@ import PasswordGate from './components/PasswordGate.vue'
 import SunflowerPage from './components/SunflowerPage.vue'
 import MainMenu from './components/MainMenu.vue'
 import TimerPage from './components/TimerPage.vue'
-import LetterPage from './components/LetterPage.vue' // 1. นำเข้าไฟล์ Letter
+import LetterPage from './components/LetterPage.vue'
+import QuizPage from './components/QuizPage.vue' // 👈 1. เพิ่มการนำเข้า QuizPage
 
 const currentPage = ref('gift-box')
 const selectedMenu = ref(null)
@@ -33,6 +34,11 @@ const handleMenuSelect = (menuId) => {
 
       <LetterPage 
         v-else-if="currentPage === 'feature-letter'" 
+        @back="toMainMenu" 
+      />
+
+      <QuizPage 
+        v-else-if="currentPage === 'feature-quiz'" 
         @back="toMainMenu" 
       />
 
